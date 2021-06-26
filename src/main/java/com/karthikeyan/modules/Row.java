@@ -1,9 +1,10 @@
-package com.karthikeyan;
+package com.karthikeyan.modules;
 
 /**
  * @author Karthikeyan on 20-06-2021
  */
 
+@SuppressWarnings("unused")
 public class Row {
     private String name;
     private Object value;
@@ -37,5 +38,8 @@ public class Row {
         this.name = name;
         this.value = value;
         this.type = type;
+    }
+
+    public Row() {
     }
 }

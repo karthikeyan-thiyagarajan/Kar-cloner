@@ -1,12 +1,11 @@
-package com.karthikeyan;
+package com.karthikeyan.modules;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 
 public class SortedList<E> extends LinkedList<E> {
-    private Comparator<E> comparator;
+    private final Comparator<E> comparator;
 
     public SortedList(final Comparator<E> comparator) {
         this.comparator = comparator;
@@ -14,7 +13,7 @@ public class SortedList<E> extends LinkedList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        Collections.sort(this, this.comparator);
+        this.sort(this.comparator);
         return super.iterator();
     }
 }
